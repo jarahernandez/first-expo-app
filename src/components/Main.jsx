@@ -1,16 +1,23 @@
 import React from 'react';
-import { Text, View, Alert, TouchableNativeFeedback } from 'react-native';
-import Constants from 'expo-constants'
-import { StatusBar } from 'expo-status-bar';
+import { View, Text } from 'react-native';
 import RepositoriesList from './RepositoriesList';
 import AppBar from './AppBar';
+import { Route, Routes } from 'react-router-native';
+import LoginPage from '../Pages/Login';
 
-const Main = (props) => {
+const Main = () => {
     return (
         <View style={{ flex: 1 }}>
             <AppBar/>
-            <RepositoriesList/>
-            <StatusBar style="auto" />
+            <Routes>
+                <Route path='/' element={<RepositoriesList/>}/>
+                <Route path='/log_in' element={
+                    <LoginPage/>
+                }/>
+                <Route path='/register' element={
+                    <Text>Register page...</Text>
+                }/>
+            </Routes>
         </View>
 )}
 

@@ -1,7 +1,10 @@
+import { Platform } from "react-native";
+
 const theme = {
     appBar: {
         primary: '#24292e',
-        textPrimary: '#fff'
+        textPrimary: '#fff',
+        textSecondary: 'grey'
     },
     color: {
         textPrimary: '#24292e',
